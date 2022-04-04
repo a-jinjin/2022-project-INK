@@ -8,11 +8,12 @@
   
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/color.css">
+  <link rel="stylesheet" href="./css/class-btn.css">
+
 
   <style>
     #root-intro{
       width: 100vw; height: 100vh;
-      /* background-color: var(--color-5); */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,7 +24,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      /* border: 1px solid black; */
       position: relative;
       z-index: 2;
     }
@@ -42,7 +42,6 @@
 
     #root-intro > main {
       width: 100vw; height: 95vh;
-      /* background-color: var(--color-3); */
       
       display: flex;
       flex-direction: column;
@@ -60,24 +59,13 @@
       font-size: 1.2rem;
       line-height: 2rem;
       text-align: center;
-      /* border: 1px solid black; */
     }
 
     #root-intro > main > div:nth-child(2) {
       width: 90%; height: 15%;
-      /* border: 1px solid black; */
 
       display: flex;
       justify-content: flex-end;
-    }
-
-    #root-intro > main > div:nth-child(2) > button {
-      width: 15vw; height: 4vh;
-      border: none;
-      border-radius: 1.5vh;
-      background-color: var(--color-2);
-      color: #fff;
-      font-size: 0.8rem;
     }
 
     #root-intro > div:nth-child(3) {
@@ -110,13 +98,13 @@
 
       <!-- 하단 스킵버튼 -->
       <div>
-        <button>start</button>
+        <button class="btn-start">start</button>
       </div>
     </main>
 
-    <!-- 배경 곡선 영역 -->
+<!-- 배경 곡선 영역 -->
     <div>
-      <img src="./img/wave-3.svg" alt="배경 일러스트">
+      <img src="./img/wave-3.svg" alt="background-img-wave">
     </div>
 
   </div>
