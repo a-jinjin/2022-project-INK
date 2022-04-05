@@ -79,8 +79,12 @@
       width: 90vw; height: 24vh;
       margin: 0vh 5vw 0 5vw;
       border-radius: 2vh;
-      background-color: lightgray;
+      /* background-color: lightgray; */
+      background-image: url(https://images.squarespace-cdn.com/content/v1/591a04711e5b6c3701808c11/1551840609907-CZCSCO3B30BU41M0F4UA/lmy-neon-coral-11.jpg?format=1500w);
+      background-size: cover;
+      
     }
+
 
 /* ==================== 잉크 기본정보 */
     #root-review > div:nth-child(4) {
@@ -111,13 +115,33 @@
       
       display: flex;
       align-items: center;
+      color: var(--color-3);
     }
 
     #root-review > div:nth-child(4) > section > div > p{
       width: 100%;
-      color: var(--color-3);
       text-align: center;
     }
+
+    #root-review > div:nth-child(4) > section > div:nth-child(1) {
+      background-color: var(--color-2);
+      color: white;
+      border: none;
+    }
+
+    #root-review > div:nth-child(4) > section > div:nth-child(2) {
+      background-color: var(--color-2);
+      color: white;
+      border: none;
+    }
+
+    #root-review > div:nth-child(4) > section > div:nth-child(5) {
+      background-color: var(--color-2);
+      color: white;
+      border: none;
+    }
+
+    
 
 /* ==================== 잉크 세부정보 */
     #root-review > div:nth-child(5) {
@@ -141,10 +165,19 @@
     }
 
     #root-review > div:nth-child(5) > section > div:nth-child(2) > div{
-      width: 50%; height: 100%;
+      width: 20%; height: 100%;
       background-color: var(--color-2);
       border-radius: 2vh;
     }
+
+    #root-review > div:nth-child(5) > section:nth-child(2) > div:nth-child(2) > div{
+      width: 40%;
+    }
+
+    #root-review > div:nth-child(5) > section:nth-child(3) > div:nth-child(2) > div{
+      width: 80%;
+    }
+
 
 
   </style>
@@ -167,9 +200,7 @@
     </div>
 
     <!-- root>nth:div(3) 잉크사진 -->
-    <div>
-      <!-- <img src="" alt=""> -->
-    </div>
+    <div></div>
 
     <!-- root>nth:div(4) 잉크 기본정보 -->
     <div>
@@ -194,7 +225,7 @@
         </div>
       </section>
       <section>
-        <p class="p-bold">번지는 정도</p>
+        <p class="p-bold">비치는 정도</p>
         <div>
           <div></div>
         </div>
