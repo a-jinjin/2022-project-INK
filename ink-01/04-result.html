@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/color.css">
   <link rel="stylesheet" href="./css/class-btn.css">
+  <!-- 웹폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
 
 
   <style>
@@ -21,6 +25,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
     }
 
 
@@ -66,7 +71,9 @@
       width: 35vh; height: 35vh;
       border-radius: 30vh;
       margin-top: 17vh;
-      background-color: var(--color-4);
+      /* background-color: var(--color-4); */
+      background-image: url(./img/ink-neon-coral.jpg);
+      background-size: cover;
     }
 
 /* ==================== 텍스트 영역 */
@@ -75,6 +82,10 @@
       margin: 3vh 0 1vh 0;
       text-align: center;
       color: var(--color-2);
+    }
+
+    #root-result > div:nth-child(3) > p:nth-child(1) {
+      line-height: 1rem;
     }
 
     #root-result > div:nth-child(3) > p:nth-child(2) {
@@ -122,7 +133,7 @@
     <!-- root>nth:header(1) 타이틀 고정영역 -->
     <header>
       <div></div>
-      <div>ink today</div>
+      <div class="p-top">하루의 잉크</div>
       <div></div>
     </header>
 
@@ -133,21 +144,21 @@
 
     <!-- root>nth:div(3) 텍스트 -->
     <div>
-      <p class="p-mid">Dance, Dance</p>
-      <p class="p-big p-bold">CORAL RED</p>
+      <p class="p-mid sans">리듬에 몸을 맡겨</p>
+      <p class="p-big p-bold sans">코랄 레드 </p>
     </div>
 
     <!-- root>nth:div(4) 텍스트 -->
     <div>
-      <p class="p-small">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero id vero assumenda nulla, nam totam minima quod. Expedita, ex dolorem.
+      <p class="p-small sans">
+        오늘 하루 좋은 일이 있었군요!<br>좋은 기운을 끌어안은 상큼발랄 코랄레드로<br>즐거운 하루를 마무리해봐요.
       </p>
     </div>
 
     <!-- root>nth:div(5) 버튼 두개 -->
     <div>
-      <button class="p-small cursor-p">잉크 보러가기</button>
-      <button class="p-small cursor-p">다시 골라보기</button>
+      <button class="p-small cursor-p sans">잉크 보러가기</button>
+      <button class="p-small cursor-p sans">다시 골라보기</button>
     </div>
 
   </div>
