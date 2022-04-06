@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>review</title>
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    #root-review{
+      width: 100vw; height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .p-large {font-size: 2rem;}
+    .p-small {font-size: 0.7rem;}
+    .p-bold {font-weight: bold;}
+
+/* 상단 고정영역 (로고) */
+    #root-review > header {
+      width: 100vw; height: 7vh;
+      background-color: lightgray;
+      position: fixed;
+    }
+
+
+/* 이미지 영역 (잉크이름) */
+    #root-review > div:nth-child(2) {
+      width: 100vw; height: 25vh;
+      background-color: orange;
+      margin-top: 7vh;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+/* 포스팅 영역 (잉크정보) */
+    #root-review > main:nth-child(3) {
+      width: 96vw; height: 60vh;
+      padding: 4vh 2vw 4vh 2vw;
+      background-color: brown;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    /* 간단 정리 영역 */
+    #root-review > main:nth-child(3) > section {
+      width: 90%; height: 29%;
+      /* background-color: white; */
+    }
+
+    #root-review > main:nth-child(3) > section > div {
+      width: 100%; height: 20%;
+      margin-bottom: 1vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #root-review > main:nth-child(3) > section > div > button {
+      padding: 1vh 5vw 1vh 5vw;
+      background-color: lightgray;
+      border: none;
+      border-radius: 3vh;
+    }
+
+    #root-review > main:nth-child(3) > section > div > p {
+      width: 65%;
+      text-align: left;
+    }
+    
+
+    /* 텍스트 영역 */
+    #root-review > main:nth-child(3) > p {
+      width: 90%;
+      text-align: justify;
+    }
+
+    /* 포스팅 이미지 영역 */
+    #root-review > main:nth-child(3) > div {
+      width: 90%; height: 40%;
+      background-color: white;
+      border-radius: 1vh;
+    }
+
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <div id="root-review">
+    <!-- 고정영역(로고) -->
+    <header></header>
+    
+    <!-- 이미지영역 -->
+    <div>
+      <p class="p-small">INK BRAND SERIES</p>
+      <p class="p-large p-bold">ORANGE</p>
+    </div>
+    
+    <!-- 내용영역 -->
+    <main>
+      <!-- category -->
+      <section>
+        <div> <button>CATEGORY</button> <p>ITEM</p> </div>
+        <div> <button>CATEGORY</button> <p>ITEM</p> </div>
+        <div> <button>CATEGORY</button> <p>ITEM</p> </div>
+      </section>
+      <!-- text -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, deserunt distinctio? Impedit, odio. Sint, commodi. Nisi beatae voluptas eveniet recusandae fugiat corrupti ipsum impedit atque veritatis, id distinctio minima dolorem.</p>
+      <!-- image -->
+      <div>image</div>
+    </main>
+  </div>
+</body>
+</html>
