@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 - mood-2</title>
+  <!-- fontawesome에서 아이콘을 가져오기 위해 넣은 부분 -->
+  <script src="https://kit.fontawesome.com/d08da597d2.js" crossorigin="anonymous"></script>
+  <!-- 외부스타일시트 -->
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/color.css">
+  <link rel="stylesheet" href="./css/class-btn.css">
+
+
+  <style>
+
+    #root-mood-3 {
+      width: 100vw; height: 100vh;
+      background-image: url(./img/bg-1.png);
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+/* ==================== 타이틀 고정영역 */
+    #root-mood-3 > header:nth-child(1) {
+      width: 90vw; height: 13vh;
+      padding: 0 5vw 0 5vw;
+
+      background-image: url(./img/wave-head.svg);
+      background-repeat: repeat-x;
+      
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top:0;
+    }
+
+    #root-mood-3 > header:nth-child(1) > div:nth-child(1) {
+      width: 5vh; height: 5vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #root-mood-3 > header:nth-child(1) > div:nth-child(1) > i {
+      color:var(--color-4);
+      font-size: 1.5rem;
+    }
+
+    #root-mood-3 > header:nth-child(1) > div:nth-child(2) {
+      color:var(--color-4);
+    }
+
+    #root-mood-3 > header:nth-child(1) > div:nth-child(3) {
+      width: 5vh; height: 5vh;
+      border-radius: 5vh;
+    }
+
+/* ==================== 텍스트 영역 */
+    #root-mood-3 > div:nth-child(2) {
+      width: 35vh; height: 10vh;
+      margin-top: 17vh;
+      text-align: center;
+    }
+
+/* ==================== 선택지 영역 (1) 실내활동 */
+    #root-mood-3 > section:nth-child(3) {
+      width: 84vw; height: 18vh;
+      padding: 3vw;
+      background-color: white;
+      border: 1px solid var(--color-5);
+      border-radius: 2vh;
+    }
+
+    #root-mood-3 > section:nth-child(3) > div:nth-child(2) {
+      width: 100%;
+      margin-top: 1.5vh;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 1vh;
+      column-gap: 1vh;
+    }
+
+    #root-mood-3 > section:nth-child(3) > div:nth-child(2) > button {
+      padding: 1vh;
+      border: 1px solid var(--color-5);
+      border-radius: 1.5vh;
+      background-color: #fff;
+      color: var(--color-3);
+      font-size: 0.8rem;
+    }
+
+    #root-mood-3 > section:nth-child(3) > div:nth-child(2) > button:hover {
+      border: none;
+      border-radius: 1.5vh;
+      background-color: var(--color-2);
+      color: #fff;
+      font-size: 0.8rem;
+    }
+
+/* ==================== 선택지 영역 (2) 야외활동 */
+    #root-mood-3 > section:nth-child(4) {
+      width: 84vw; height: 18vh;
+      padding: 3vw;
+      background-color: white;
+      border: 1px solid var(--color-5);
+      border-radius: 2vh;
+      margin-top: 1vh;
+    }
+
+    #root-mood-3 > section:nth-child(4) > div:nth-child(2) {
+      width: 100%;
+      margin-top: 1.5vh;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 1vh;
+      column-gap: 1vh;
+    }
+
+    #root-mood-3 > section:nth-child(4) > div:nth-child(2) > button {
+      padding: 1vh;
+      border: 1px solid var(--color-5);
+      border-radius: 1.5vh;
+      background-color: #fff;
+      color: var(--color-3);
+      font-size: 0.8rem;
+    }
+
+    #root-mood-3 > section:nth-child(4) > div:nth-child(2) > button:hover {
+      border: none;
+      border-radius: 1.5vh;
+      background-color: var(--color-2);
+      color: #fff;
+      font-size: 0.8rem;
+    }
+
+/* ==================== 버튼 영역 */
+    #root-mood-3 > div:nth-child(5) {
+      position: fixed;
+      bottom: 10vh;
+    }
+
+
+
+  </style>
+
+
+</head>
+<body>
+  <div id="root-mood-3">
+    <!-- root>nth:header(1) 타이틀 고정영역 -->
+    <header>
+      <div></div>
+      <div>ink today</div>
+      <div></div>
+    </header>
+
+    <!-- root>nth:div(2) 텍스트 -->
+    <div>
+      <p class="p-mid">Lorem ipsum adipisicing elit?</p>
+    </div>
+
+    <!-- root>nth:section (3) 선택박스 1 -->
+    <section>
+      <p class="p-bold">실내활동</p>
+      <div>
+        <button>action-1</button>
+        <button>action-2</button>
+        <button>action-3</button>
+        <button>action-4</button>
+        <button>action-5</button>
+        <button>action-6</button>
+        <button>action-7</button>
+        <button>action-8</button>
+        <button>action-9</button>
+      </div>
+    </section>
+
+    <!-- root>nth:section (4) 선택박스 2 -->
+    <section>
+      <p class="p-bold">야외활동</p>
+      <div>
+        <button>action-1</button>
+        <button>action-2</button>
+        <button>action-3</button>
+        <button>action-4</button>
+        <button>action-5</button>
+        <button>action-6</button>
+        <button>action-7</button>
+        <button>action-8</button>
+        <button>action-9</button>
+      </div>
+    </section>
+
+    <!-- root>nth:div(5) 버튼 -->
+    <div>
+      <button class="btn-skip cursor-p">확인</button>
+    </div>
+
+  </div>
+</body>
+</html>
