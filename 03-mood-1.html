@@ -17,6 +17,8 @@
 
     #root-mood-1 {
       width: 100vw; height: 100vh;
+      background-image: url(./img/bg-2.png);
+      background-size: cover;
 
       display: flex;
       flex-direction: column;
@@ -105,23 +107,16 @@
     }
 
     /* ==================== 버튼 영역 */
-    #root-mood-1 > div:nth-child(4) > button {
-      margin-top: 15vh;
-      width: 15vw; height: 4vh;
-      border: 1px solid var(--color-5);
-      border-radius: 1.5vh;
-      background-color: #fff;
-      color: var(--color-3);
-      font-size: 0.8rem;
+    #root-mood-1 > div:nth-child(4){
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
     }
-
-    #root-mood-1 > div:nth-child(4) > button:hover {
-      width: 15vw; height: 4vh;
-      border: none;
-      border-radius: 1.5vh;
-      background-color: var(--color-2);
-      color: #fff;
-      font-size: 0.8rem;
+    
+    #root-mood-1 > div:nth-child(4) > button {
+      position: fixed;
+      bottom: 10vh;
     }
 
 
@@ -162,7 +157,7 @@
 
     <!-- root>nth:div(4) 버튼 -->
     <div>
-      <button class="cursor-p">확인</button>
+      <button class="cursor-p btn-skip">확인</button>
     </div>
 
   </div>
