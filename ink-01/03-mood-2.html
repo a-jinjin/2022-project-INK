@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/color.css">
   <link rel="stylesheet" href="./css/class-btn.css">
+  <!-- 웹폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700;900&display=swap" rel="stylesheet">
 
 
   <style>
@@ -100,7 +104,7 @@
     }
 
     #root-mood-2 > main:nth-child(3) > div:nth-child(1) > div:nth-child(3){
-      width: 25%; height: 25%;
+      width: 30%; height: 30%;
       position: absolute;
       bottom: 30%;
       z-index: 2;
@@ -130,13 +134,13 @@
     <!-- root>nth:header(1) 타이틀 고정영역 -->
     <header>
       <div></div>
-      <div>ink today</div>
+      <div class="p-top">하루의 잉크</div>
       <div></div>
     </header>
 
     <!-- root>nth:div(2) 텍스트 -->
     <div>
-      <p class="p-mid">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p class="p-mid sans">오늘 하루<br>어떤 기분이었나요?</p>
     </div>
 
     <!-- root>nth:main(3) 이미지 -->
@@ -152,13 +156,13 @@
       </div>
       <!-- 텍스트 - 기분 -->
       <div>
-        <p class="p-large p-bold">HAPPY !</p>
+        <p class="p-large p-bold sans">HAPPY !</p>
       </div>
     </main>
 
     <!-- root>nth:div(4) 버튼 -->
     <div>
-      <button class="cursor-p btn-start">확인</button>
+      <button class="cursor-p btn-start sans">확인</button>
     </div>
 
   </div>
