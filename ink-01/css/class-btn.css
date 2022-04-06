@@ -22,7 +22,7 @@
   letter-spacing: 0.5rem;
 }
 
-.p-small { font-size: 0.8rem; }
+.p-small { font-size: 0.8rem; font-weight: 300;}
 
 .p-mid { font-size: 1.2rem; }
 
@@ -30,7 +30,7 @@
 
 .p-big { font-size: 2.3rem; }
 
-.p-bold { font-weight: bold; }
+.p-bold { font-weight: 700; }
 
 .sans {font-family: 'Noto Sans KR', sans-serif;}
 
