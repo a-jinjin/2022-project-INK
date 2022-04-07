@@ -32,12 +32,21 @@
 
 .calendar-on {
   border-radius: 3vh;
-  background-color: var(--color-3);
-  color: var(--color-6);
+  background-color: var(--color-5);
+  color: var(--color-2);
 }
 
 .calendar-today {
   border-radius: 3vh;
-  border: 1px solid var(--color-4);
+  border: 1px solid var(--color-5);
   color: var(--color-3);
+  font-weight: 700;
+}
+
+.calendar-arrow {
+  width: 100%; height: 100%;
+  color: var(--color-5);
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.8rem;
 }

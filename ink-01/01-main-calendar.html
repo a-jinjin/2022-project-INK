@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>01 Hello HARU!</title>
+  <!-- fontawesome에서 아이콘을 가져오기 위해 넣은 부분 -->
+  <script src="https://kit.fontawesome.com/d08da597d2.js" crossorigin="anonymous"></script>
   <!-- 외부스타일시트 -->
   <link rel="stylesheet" href="./css/class-btn.css">
   <link rel="stylesheet" href="./css/class-top.css">
@@ -24,11 +26,6 @@
       flex-direction: column;
       align-items: center;
     }
-
-
-/* ==================== 타이틀 고정영역 */
-    
-
 
 /* ==================== 텍스트 영역 */
     #root-calendar > div:nth-child(2) {
@@ -57,17 +54,16 @@
     #root-calendar > section:nth-child(3) > div:nth-child(1) > div{
       width: 3vh; height: 3vh;
       border-radius: 3vh;
-      background-color: var(--color-5);
+      border: 1px solid var(--color-5);
     }
-
+    
     #root-calendar > section:nth-child(3) > div:nth-child(1) > p{
       color: var(--color-2);
     }
 
     #root-calendar > section:nth-child(3) > div:nth-child(2) {
-      color: var(--color-2);
-      background-color: var(--color-5);
-      border-radius: 2vh;
+      color: var(--color-3);
+      border-bottom: 1px solid var(--color-5);
       text-align: center;
       display: grid;
       grid-template-columns: repeat(7, 1fr);
@@ -90,7 +86,6 @@
     }
 
 
-
   </style>
 </head>
 
@@ -109,15 +104,16 @@
     <!-- root>nth:div(2) 텍스트 -->
     <div>
       <p class="p-mid sans">안녕, 하루!<br>오늘 하루는 어땠나요?</p>
+      <div>moment().format('ll');</div>
     </div>
 
     <!-- root>nth:section(3) 달력 -->
     <section>
       <!-- april -->
       <div>
-        <div></div>
+        <div><i class="fa-solid fa-caret-left calendar-arrow"></i></div>
         <p class="p-bold sans">MAY</p>
-        <div></div>
+        <div><i class="fa-solid fa-caret-right calendar-arrow"></i></div>
       </div>
       <!-- 요일 -->
       <div>
