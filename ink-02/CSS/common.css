@@ -1,0 +1,85 @@
+/* body의 마진과 패딩 없도록 */
+*{margin: 0; padding: 0;}
+
+/* 전체 크기 지정 */
+.container{
+  width: 100vw; height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 상단 고정영역(로고) */
+.top {
+  width: 90vw; height: 5vh;
+  background-color: var(--color-6);
+  padding: 1vh 5vw 1vh 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  box-shadow: 0 1vh 1vh var(--color-blur);
+}
+
+.top-i {
+  width: 3vh; height: 3vh;
+  border-radius: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-2);
+}
+
+.top-logo {
+  width: 40vw; height: 3vh;
+  background-image: url(../img/logo-type.svg);
+  background-size:auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 정렬 */
+.flex {display: flex;}
+.flex-between {justify-content: space-between;}
+
+/* 아이콘 */
+/* 잉크리뷰란의 작은 동그라미 */
+.circle-min-off {
+  width: 2vh; height: 2vh; 
+  border-radius: 2vh; 
+  background-color: var(--color-5);
+}
+.circle-min-on {
+  width: 2vh; height: 2vh; 
+  border-radius: 2vh; 
+  background-color: var(--color-4);
+}
+
+/* 장바구니 추가버튼 */
+.plus {
+  width: 6vh; height: 6vh;
+  border: 1px solid var(--color-6);
+  border-radius: 5vh;
+  background-color: var(--color-2);
+  position: fixed;
+  bottom: 10vh;
+  right: 7vw;
+}
+/* 자세히보기 버튼 */
+.zoom {
+  width: 5vh; height: 5vh;
+  border: 1px solid var(--color-6);
+  border-radius: 5vh;
+  background-color: var(--color-4);
+  position: absolute;
+  bottom: 4vh;
+  right: 7vw;
+}
+
+/* 텍스트 */
+.p-small {font-size: 0.7rem;}
+.p-mid {font-size: 0.9rem;}
+.p-large {font-size: 1.2rem;}
+.p-big {font-size: 2rem;}
+.p-bold {font-weight: bold;}
+.line-mid {line-height: 1.5rem;}

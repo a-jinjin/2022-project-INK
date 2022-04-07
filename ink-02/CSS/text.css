@@ -1,0 +1,5 @@
+/* 글씨와 관련된 class */
+
+.p-large {font-size: 2rem;}
+.p-small {font-size: 0.7rem;}
+.p-bold {font-weight: bold;}

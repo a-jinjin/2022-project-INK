@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>review</title>
+  <!-- fontawesome에서 아이콘을 가져오기 위해 넣은 부분 -->
+  <script src="https://kit.fontawesome.com/d08da597d2.js" crossorigin="anonymous"></script>
+  <!-- 외부스타일시트 -->
+  <link rel="stylesheet" href="./CSS/color.css">
+  <link rel="stylesheet" href="./CSS/text.css">
+  <link rel="stylesheet" href="./CSS/common.css">
+
+  <style>
+
+
+
+/* 이미지 영역 (잉크이름) */
+    #root-review > div:nth-child(2) {
+      width: 100vw; height: 25vh;
+      margin-top: 7vh;
+      /* background-color: var(--color-4); */
+      background-image: url(https://images.squarespace-cdn.com/content/v1/591a04711e5b6c3701808c11/1616734595680-E6M9XFDDM2BINK5IEQEF/kw-midnight-blue-2.jpg?format=1500w);
+      background-size: cover;
+      background-position: center;
+      color:var(--color-1);
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+/* 포스팅 영역 (잉크정보) */
+    #root-review > main:nth-child(3) {
+      width: 96vw; height: 60vh;
+      padding: 4vh 2vw 4vh 2vw;
+      background-color: var(--color-6);
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* 간단 정리 영역 */
+    #root-review > main:nth-child(3) > section {
+      width: 90%; height: 29%;
+      /* background-color: black; */
+    }
+
+    #root-review > main:nth-child(3) > section > div {
+      width: 100%; height: 20%;
+      margin-bottom: 1vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    #root-review > main:nth-child(3) > section > div > button {
+      width: 30%;
+      padding: 1vh 5vw 1vh 5vw;
+      background-color: var(--color-2);
+      border: none;
+      border-radius: 3vh;
+      color: var(--color-5);
+      font-weight: 700;
+    }
+    
+    #root-review > main:nth-child(3) > section > div > div:nth-child(2) {
+      width: 60%;
+    }
+
+    
+    /* 텍스트 영역 */
+    #root-review > main:nth-child(3) > p {
+      width: 90%;
+      color: var(--color-1);
+      text-align: justify;
+    }
+
+    /* 포스팅 이미지 영역 */
+    #root-review > main:nth-child(3) > div {
+      width: 90%; height: 45%;
+      background-color: var(--color-4);
+      background-image: url(https://images.squarespace-cdn.com/content/v1/591a04711e5b6c3701808c11/1616734646188-49LR1FWC1UZU5KRDTDM5/kw-midnight-blue-5.jpg?format=500w);
+      background-size: cover;
+      background-position: center;
+      border-radius: 1vh;
+    }
+
+    #root-review > aside {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      color: var(--color-6);
+    }
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <div id="root-review" class="container">
+    <!-- 고정영역(로고) -->
+    <header class="top">
+      <!-- 홈/뒤로가기 -->
+      <div class="top-i"><i class="fa-solid fa-caret-left"></i></div>
+      <div class="top-logo"></div>
+      <!-- 장바구니 -->
+      <div class="top-i"><i class="fa-solid fa-cart-shopping"></i></div>
+    </header>
+    
+    <!-- 이미지영역 -->
+    <div>
+      <p class="p-small">PARCKER QUINK</p>
+      <p class="p-big p-bold">BLUE BLACK</p>
+    </div>
+    
+    <!-- 내용영역 -->
+    <main>
+      <!-- category -->
+      <section>
+        <div> 
+          <button>건조 속도</button> 
+          <div class="flex flex-between">
+            <div class="circle-min-on"></div>
+            <div class="circle-min-on"></div>
+            <div class="circle-min-on"></div>
+            <div class="circle-min-on"></div>
+            <div class="circle-min-off"></div>
+          </div>
+        </div>
+        <div> 
+          <button>번짐 정도</button> 
+          <div class="flex flex-between">
+            <div class="circle-min-on"></div>
+            <div class="circle-min-on"></div>
+            <div class="circle-min-on"></div>
+            <div class="circle-min-off"></div>
+            <div class="circle-min-off"></div>
+          </div>
+        </div>
+        <div> 
+          <button>잉크 흐름</button> 
+          <div class="flex flex-between">
+            <div class="circle-min-on"></div>
+            <div class="circle-min-on"></div>
+            <div class="circle-min-on"></div>
+            <div class="circle-min-on"></div>
+            <div class="circle-min-off"></div>
+          </div>
+        </div>
+      </section>
+      <!-- text -->
+      <p class="p-mid line-mid">만년필이 막혔나요? 파커 큉크 잉크를 넣어보세요. 만년필 청소가 필요한가요? 파커 큉크를 넣어보세요. 웬만해선 큉크로 해결됩니다. 중립적인 블루블랙 잉크지만, 모든 테스트에서 중간 이상의 퍼포먼스를 보여주는 훌륭한 잉크입니다. '만능 해결사'라는 별명은 덤!</p>
+      <!-- image -->
+      <div></div>
+    </main>
+
+    <!-- 장바구니 추가(position-fixed고정영역) -->
+    <aside class="plus"><i class="fa-solid fa-cart-plus"></i></aside>
+  </div>
+</body>
+</html>

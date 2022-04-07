@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>market-2</title>
+  <!-- fontawesome에서 아이콘을 가져오기 위해 넣은 부분 -->
+  <script src="https://kit.fontawesome.com/d08da597d2.js" crossorigin="anonymous"></script>
+  <!-- 외부스타일시트 -->
+  <link rel="stylesheet" href="./CSS/color.css">
+  <link rel="stylesheet" href="./CSS/text.css">
+  <link rel="stylesheet" href="./CSS/common.css">
+
+  <style>
+#root-market-2{
+  align-items: center;
+}
+/* 장바구니 */
+#root-market-2 > main {
+  width: 80vw; height: 27vh;
+  margin-top: 12vh;
+  box-shadow: 0 1vh 1vh var(--color-blur);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 체크박스 영역 */
+#root-market-2 > main > div:nth-child(1) {
+  width: 10%; height: 90%;
+  padding: 5% 0 5% 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* 체크표시 */
+#root-market-2 > main > div:nth-child(1) > div {
+  width: 2vh; height: 2vh;
+  background-color: var(--color-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-6);
+}
+
+/* 잉크 */
+#root-market-2 > main > div:nth-child(2) {
+  width: 80%; height: 90%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 장바구니 내용영역 (일괄) */
+#root-market-2 > main > div:nth-child(2) > div{
+  width: 100%; height: 50%;
+}
+
+/* 장바구니 들어간 잉크 */
+#root-market-2 > main > div:nth-child(2) > div:nth-child(1){
+  padding-bottom: 5%;
+  border-bottom: 1px solid var(--color-5);
+}
+
+/* 잉크사진 */
+#root-market-2 > main > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+  width: 35%; height: 70%;
+  margin-right: 5%;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/591a04711e5b6c3701808c11/1616734595680-E6M9XFDDM2BINK5IEQEF/kw-midnight-blue-2.jpg?format=1500w);
+  background-size: cover;
+  background-position: center;
+}
+
+/* 잉크이름 들어갈 영역 */
+#root-market-2 > main > div:nth-child(2) > div:nth-child(1) > div:nth-child(2){
+  width: 60%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 수량 영역 */
+#root-market-2 > main > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2){
+  justify-content: flex-end;
+}
+
+/* 수량 더하기 빼기 버튼 */
+#root-market-2 > main > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)> div {
+  width: 2vh; height: 2vh; 
+  border-radius: 2vh; 
+  border: 1px solid var(--color-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-3);
+}
+
+/* 수량 */
+#root-market-2 > main > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)> p {
+  margin: 0 5% 0 5%;
+}
+
+/* 가격 영역 */
+#root-market-2 > main > div:nth-child(2) > div:nth-child(2){
+  height: 15%;
+  color: var(--color-3);
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#root-market-2 > main > div:nth-child(2) > div:nth-child(2) > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#root-market-2 > main > div:nth-child(2) > div:nth-child(2) > div:nth-child(3){
+  color: var(--color-1);
+}
+
+/* 결제영역 */
+#root-market-2 > footer {
+  width: 90vw; height: 20vh;
+  padding: 3vh 5vw 3vh 5vw;
+  /* box-shadow: 0 1vh 1vh var(--color-blur); */
+  background-color: var(--color-5);
+  color: var(--color-1);
+
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+}
+
+#root-market-2 > footer > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#root-market-2 > footer > div:nth-child(3) {
+  margin-top: 1vh;
+  padding-top: 1vh;
+  border-top: 1px solid var(--color-3);
+  color: var(--color-3);
+}
+
+#root-market-2 > footer > div:nth-child(4) > button {
+  width: 48%;
+  margin-top: 2vh;
+  padding: 2%;
+  border-radius: 1vh;
+  border: none;
+  font-weight: bold;
+}
+#root-market-2 > footer > div:nth-child(4) > button:nth-child(1) {
+  background-color: var(--color-6);
+  color: var(--color-3);
+}
+#root-market-2 > footer > div:nth-child(4) > button:nth-child(2) {
+  background-color: var(--color-2);
+  color: var(--color-6);
+}
+
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <div id="root-market-2" class="container">
+    <!-- 고정영역(로고) -->
+    <header class="top">
+      <!-- 홈/뒤로가기 -->
+      <div class="top-i"><i class="fa-solid fa-caret-left"></i></div>
+      <div><p class="p-mid p-bold">장바구니</p></div>
+      <!-- 마이페이지 -->
+      <div class="top-i"></div>
+    </header>
+    
+    <!-- 결제할 잉크 -->
+    <main class="flex">
+      <!-- 체크박스 -->
+      <div>
+        <div><i class="fa-solid fa-check"></i></div>
+      </div>
+      <!-- 내용 -->
+      <div>
+        <!-- 사진과 이름 -->
+        <div class="flex">
+          <div></div>
+          <div>
+            <div>
+              <p class="p-small">PARKER QUINK</p>
+              <p class="p-mid p-bold">BLUE BLACK</p>
+            </div>
+            <div class="flex">
+              <div><i class="fa-solid fa-minus p-mid"></i></div>
+              <p class="p-mid">1</p>
+              <div><i class="fa-solid fa-plus p-mid"></i></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 가격 -->
+        <div>
+          <div class="p-small">
+            <span>상품금액</span>
+            <span>12,000원</span>
+          </div>
+          <div class="p-small">
+            <span>배송비</span>
+            <span>3,000원</span>
+          </div>
+          <div class="p-mid p-bold">
+            <span>주문금액</span>
+            <span>15,000원</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 결제 영역 -->
+    <footer>
+      <div class="p-mid p-bold">
+        <span>상품금액</span>
+        <span>12,000원</span>
+      </div>
+      <div class="p-mid p-bold">
+        <span>배송비</span>
+        <span>3,000원</span>
+      </div>
+      <div class="p-large p-bold">
+        <span>결제 예정 금액</span>
+        <span>15,000원</span>
+      </div>
+      <div>
+        <button>둘러보기</button>
+        <button>구매하기</button>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

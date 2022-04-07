@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>market-1</title>
+  <!-- fontawesome에서 아이콘을 가져오기 위해 넣은 부분 -->
+  <script src="https://kit.fontawesome.com/d08da597d2.js" crossorigin="anonymous"></script>
+  <!-- 외부스타일시트 -->
+  <link rel="stylesheet" href="./CSS/color.css">
+  <link rel="stylesheet" href="./CSS/text.css">
+  <link rel="stylesheet" href="./CSS/common.css">
+
+  <style>
+#root-market-1{
+  align-items: center;
+}
+/* 잉크 이름 영역 */
+#root-market-1 > main {
+  width: 80vw; height: 35vh;
+  margin-top: 12vh;
+  box-shadow: 0 1vh 1vh var(--color-blur);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 잉크 이미지 */
+#root-market-1 > main > div {
+  background-image: url(./img/empty.svg);
+  background-size: cover;
+  background-position: center;
+  width: 15vh; height: 15vh;
+}
+
+#root-market-1 > section {
+  width: 100vw; height: 14vh;
+  /* background-color: gray; */
+  padding : 8vh 0 1vh 0;
+  text-align: center;
+  color: var(--color-2);
+}
+
+#root-market-1 > section > p:nth-child(1){
+  margin-bottom: 2vh;
+  color: var(--color-3);
+}
+
+
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <div id="root-market-1" class="container">
+    <!-- 고정영역(로고) -->
+    <header class="top">
+      <!-- 홈/뒤로가기 -->
+      <div class="top-i"><i class="fa-solid fa-caret-left"></i></div>
+      <div><p class="p-mid p-bold">장바구니</p></div>
+      <!-- 마이페이지 -->
+      <div class="top-i"></div>
+    </header>
+    
+    <!-- 잉크 이름과 이미지 -->
+    <main>
+      <!-- 빈 잉크 이미지 -->
+        <div></div>
+    </main>
+
+    <!-- 하단 텍스트 영역 -->
+    <section>
+      <p class="p-large p-bold">장바구니가 비었어요.</p>
+      <p class="p-mid">오늘의 잉크를 추천받아보는건 어떨까요?</p>
+    </section>
+
+  </div>
+</body>
+</html>

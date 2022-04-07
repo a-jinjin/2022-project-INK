@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>intro-3</title>
+  <!-- fontawesome에서 아이콘을 가져오기 위해 넣은 부분 -->
+  <script src="https://kit.fontawesome.com/d08da597d2.js" crossorigin="anonymous"></script>
+  <!-- 외부스타일시트 -->
+  <link rel="stylesheet" href="./CSS/color.css">
+  <link rel="stylesheet" href="./CSS/text.css">
+  <link rel="stylesheet" href="./CSS/common.css">
+
+  <style>
+    #root-intro-1{
+      background-image: url(./img/bg-03.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #root-intro-1> header {
+      width: 90vw; height: 3vh;
+      padding: 1vh 5vw 1vh 5vw;
+      position: fixed;
+      display: flex;
+      align-items: center;
+    }
+    #root-intro-1> header > div{
+      width: 1vh; height: 1vh;
+      border-radius: 1vh;
+      margin-right: 1vh;
+      border: 1px solid var(--color-5);
+    }
+    #root-intro-1> header > div:nth-child(1){
+      background: var(--color-5);
+    }
+
+    #root-intro-1 > p:nth-child(2) {
+      margin-top: 70vh;
+      text-align: center;
+      color: var(--color-2);
+    }
+
+    #root-intro-1 > aside {
+      width: 5vh; height: 5vh;
+      border-radius: 5vh;
+      background-color: var(--color-2);
+      position: fixed;
+      bottom: 10vh;
+      right: 7vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-6);
+      font-size: 2rem;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+  <div id="root-intro-1" class="container">
+    <header>
+      <div></div>
+      <div></div>
+      <div></div>
+    </header>
+
+    
+
+    <!-- 다음페이지(position-fixed고정영역) -->
+    <aside><i class="fa-solid fa-caret-right"></i></aside>
+  </div>
+</body>
+</html>

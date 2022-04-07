@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>result</title> 
+  <!-- fontawesome에서 아이콘을 가져오기 위해 넣은 부분 -->
+  <script src="https://kit.fontawesome.com/d08da597d2.js" crossorigin="anonymous"></script>
+  <!-- 외부스타일시트 -->
+  <link rel="stylesheet" href="./CSS/color.css">
+  <link rel="stylesheet" href="./CSS/text.css">
+  <link rel="stylesheet" href="./CSS/common.css">
+
+  <style>
+/* 잉크 이름 영역 */
+#root-result > main {
+  width: 100vw; height: 40vh;
+  margin-top: 12vh;
+  box-shadow: 0 1vh 1vh var(--color-blur);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color:var(--color-1);
+}
+
+/* 잉크 이미지 영역 */
+#root-result > main > div:nth-child(2){
+  width: 30vh; height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* 잉크 이미지 */
+#root-result > main > div:nth-child(2) > div:nth-child(1) {
+  background-color: var(--color-4);
+  background-image: url(https://images.squarespace-cdn.com/content/v1/591a04711e5b6c3701808c11/1616734595680-E6M9XFDDM2BINK5IEQEF/kw-midnight-blue-2.jpg?format=1500w);
+  background-size: cover;
+  background-position: center;
+  width: 24vh; height: 24vh;
+  border-radius: 24vh;
+}
+
+#root-result > main > div:nth-child(2) > div:nth-child(2) {
+  color: var(--color-6);
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root-result > section {
+  width: 100vw; height: 14vh;
+  /* background-color: gray; */
+  padding : 8vh 0 1vh 0;
+  text-align: center;
+}
+
+#root-result > section > p:nth-child(1){
+  margin-bottom: 2vh;
+}
+
+#root-result > aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  color: var(--color-6);
+}
+
+
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <div id="root-result" class="container">
+    <!-- 고정영역(로고) -->
+    <header class="top">
+      <!-- 홈/뒤로가기 -->
+      <div class="top-i"><i class="fa-solid fa-caret-left"></i></div>
+      <div class="top-logo"></div>
+      <!-- 장바구니 -->
+      <div class="top-i"><i class="fa-solid fa-cart-shopping"></i></div>
+    </header>
+    
+    <!-- 잉크 이름과 이미지 -->
+    <main>
+      <!-- 텍스트 -->
+      <div>
+        <p class="p-small">PARKER QUINK</p>
+        <p class="p-big p-bold">BLUE BLACK</p>
+      </div>
+      <!-- 이미지 -->
+      <div>
+        <!-- 잉크 이미지 -->
+        <div></div>
+        <!-- 자세히보기 버튼 -->
+        <div class="zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      </div>
+    </main>
+
+    <!-- 하단 텍스트 영역 -->
+    <section>
+      <p class="p-mid p-bold">마음까지 차분해지는 인디고 블루</p>
+      <p class="p-mid line-mid">하루종일 정신없이 뛰어다니셨군요.<br>마음까지 차분해지는 짙은 인디고 블루와 함께<br>힐링타임 가져보는건 어떨까요?</p>
+    </section>
+
+    <!-- 장바구니 추가(position-fixed고정영역) -->
+    <aside class="plus"><i class="fa-solid fa-cart-plus"></i></aside>
+  </div>
+</body>
+</html>
