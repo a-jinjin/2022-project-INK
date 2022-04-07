@@ -16,12 +16,6 @@
   font-size: 0.8rem;
 }
 
-.p-top {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.5rem;
-}
-
 .p-small { font-size: 0.8rem; font-weight: 300;}
 
 .p-mid { font-size: 1.2rem; }
@@ -35,3 +29,15 @@
 .sans {font-family: 'Noto Sans KR', sans-serif;}
 
 .cursor-p {cursor: pointer;}
+
+.calendar-on {
+  border-radius: 3vh;
+  background-color: var(--color-3);
+  color: var(--color-6);
+}
+
+.calendar-today {
+  border-radius: 3vh;
+  border: 1px solid var(--color-4);
+  color: var(--color-3);
+}
