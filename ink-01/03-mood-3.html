@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/color.css">
   <link rel="stylesheet" href="./css/class-btn.css">
+  <link rel="stylesheet" href="./css/class-top.css">
   <!-- 웹폰트 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,43 +31,6 @@
     }
 
 
-/* ==================== 타이틀 고정영역 */
-    #root-mood-3 > header:nth-child(1) {
-      width: 90vw; height: 13vh;
-      padding: 0 5vw 0 5vw;
-
-      background-image: url(./img/wave-head.svg);
-      background-repeat: repeat-x;
-      
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: fixed;
-      top:0;
-    }
-
-    #root-mood-3 > header:nth-child(1) > div:nth-child(1) {
-      width: 5vh; height: 5vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #root-mood-3 > header:nth-child(1) > div:nth-child(1) > i {
-      color:var(--color-4);
-      font-size: 1.5rem;
-    }
-
-    #root-mood-3 > header:nth-child(1) > div:nth-child(2) {
-      color:var(--color-4);
-    }
-
-    #root-mood-3 > header:nth-child(1) > div:nth-child(3) {
-      width: 5vh; height: 5vh;
-      border-radius: 5vh;
-    }
-
 /* ==================== 텍스트 영역 */
     #root-mood-3 > div:nth-child(2) {
       width: 35vh; height: 10vh;
@@ -75,75 +39,64 @@
     }
 
 /* ==================== 선택지 영역 (1) 실내활동 */
-    #root-mood-3 > section:nth-child(3) {
-      width: 84vw; height: 19vh;
-      padding: 3vw;
-      background-color: white;
+    #root-mood-3 > section {
+      width: 86vw; height: 24vh;
+      padding: 2vh;
       border: 1px solid var(--color-5);
       border-radius: 2vh;
-    }
-
-    #root-mood-3 > section:nth-child(3) > div:nth-child(2) {
-      width: 100%;
-      margin-top: 1.5vh;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      row-gap: 1vh;
-      column-gap: 1vh;
-    }
-
-    #root-mood-3 > section:nth-child(3) > div:nth-child(2) > button {
-      padding: 1vh;
-      border: 1px solid var(--color-5);
-      border-radius: 1.5vh;
-      background-color: #fff;
-      color: var(--color-3);
-      font-size: 0.8rem;
-    }
-
-    #root-mood-3 > section:nth-child(3) > div:nth-child(2) > button:hover {
-      border: none;
-      border-radius: 1.5vh;
-      background-color: var(--color-2);
-      color: #fff;
-      font-size: 0.8rem;
-    }
-
-/* ==================== 선택지 영역 (2) 야외활동 */
-    #root-mood-3 > section:nth-child(4) {
-      width: 84vw; height: 19vh;
-      padding: 3vw;
       background-color: white;
-      border: 1px solid var(--color-5);
-      border-radius: 2vh;
-      margin-top: 1vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1vh;
     }
 
-    #root-mood-3 > section:nth-child(4) > div:nth-child(2) {
+    #root-mood-3 > section > div:nth-child(1){
       width: 100%;
-      margin-top: 1.5vh;
+      text-align: left;
+      margin-bottom: 1vh;
+    }
+
+    /* 목록 스타일 지정 */
+    #root-mood-3 > section > main:nth-child(2) {
+      width: 100%;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
       row-gap: 1vh;
-      column-gap: 1vh;
     }
 
-    #root-mood-3 > section:nth-child(4) > div:nth-child(2) > button {
-      padding: 1vh;
-      border: 1px solid var(--color-5);
-      border-radius: 1.5vh;
-      background-color: #fff;
+    /* 활동 영역(활동명-토글 묶여있는 div) */
+    #root-mood-3 > section > main:nth-child(2) > div {
+      width: 100%; height: 2.5vh;
+      /* background-color: tan; */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* 활동 이름들 */
+    #root-mood-3 > section > main:nth-child(2) > div > p:nth-child(1) {
       color: var(--color-3);
-      font-size: 0.8rem;
     }
 
-    #root-mood-3 > section:nth-child(4) > div:nth-child(2) > button:hover {
-      border: none;
-      border-radius: 1.5vh;
-      background-color: var(--color-2);
-      color: #fff;
-      font-size: 0.8rem;
+    /* 토글 배경 */
+    #root-mood-3 > section > main:nth-child(2) > div > div:nth-child(2) {
+      width: 15%; height: 100%;
+      border-radius: 2vh;
+      background-color: var(--color-5);
+      display: flex;
+      align-items: center;
     }
+    
+    /* 토글 동그라미 */
+    #root-mood-3 > section > main:nth-child(2) > div > div:nth-child(2) > div {
+      width: 2vh; height: 2vh;
+      border-radius: 2vh;
+      background-color: var(--color-3);
+      position: relative;
+      left: 0.5vh;
+    }
+
+    
 
 /* ==================== 버튼 영역 */
     #root-mood-3 > div:nth-child(5) {
@@ -160,10 +113,10 @@
 <body>
   <div id="root-mood-3">
     <!-- root>nth:header(1) 타이틀 고정영역 -->
-    <header>
-      <div></div>
-      <div class="p-top">하루의 잉크</div>
-      <div></div>
+    <header class="top">
+      <div class="top-btn"></div>
+      <div class="top-p">하루의 잉크</div>
+      <div class="top-btn"></div>
     </header>
 
     <!-- root>nth:div(2) 텍스트 -->
@@ -173,34 +126,82 @@
 
     <!-- root>nth:section (3) 선택박스 1 -->
     <section>
-      <p class="p-bold sans">실내활동</p>
-      <div>
-        <button class="sans">요가와 명상</button>
-        <button class="sans">음악 감상</button>
-        <button class="sans">악기 연주</button>
-        <button class="sans">드라마 시청</button>
-        <button class="sans">화분 가꾸기</button>
-        <button class="sans">일기 쓰기</button>
-        <button class="sans">뜨개질</button>
-        <button class="sans">게임</button>
-        <button class="sans">대청소</button>
-      </div>
+      <div><p class="p-bold sans">실내활동</p></div>
+      <!-- 활동 들어갈 영역 -->
+      <main>
+        <!-- ---action 1~6 버튼--- -->
+        <div> 
+          <p class="p-small sans">요가와 명상</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <!-- 이하 같은 리스트 *5 -->
+        <div> 
+          <p class="p-small sans">음악 감상</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <div> 
+          <p class="p-small sans">악기 연주</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <div> 
+          <p class="p-small sans">드라마 시청</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <div> 
+          <p class="p-small sans">화분 가꾸기</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <div> 
+          <p class="p-small sans">일기쓰기</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+      </main>
     </section>
 
     <!-- root>nth:section (4) 선택박스 2 -->
     <section>
-      <p class="p-bold sans">야외활동</p>
-      <div>
-        <button class="sans">산책</button>
-        <button class="sans">콘서트</button>
-        <button class="sans">영화관</button>
-        <button class="sans">윈도우 쇼핑</button>
-        <button class="sans">실외 스포츠</button>
-        <button class="sans">외식</button>
-        <button class="sans">캠핑</button>
-        <button class="sans">등산</button>
-        <button class="sans">야구장</button>
-      </div>
+      <div><p class="p-bold sans">야외활동</p></div>
+      <!-- 활동 들어갈 영역 -->
+      <main>
+        <!-- ---action 1~6 버튼--- -->
+        <div> 
+          <p class="p-small sans">산책</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <!-- 이하 같은 리스트 *5 -->
+        <div> 
+          <p class="p-small sans">콘서트</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <div> 
+          <p class="p-small sans">영화관</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <div> 
+          <p class="p-small sans">윈도우 쇼핑</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <div> 
+          <p class="p-small sans">실외 스포츠</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+        <div> 
+          <p class="p-small sans">캠핑</p>
+          <!-- 온오프 버튼 -->
+          <div> <div></div> </div>
+        </div>
+      </main>
     </section>
 
     <!-- root>nth:div(5) 버튼 -->
