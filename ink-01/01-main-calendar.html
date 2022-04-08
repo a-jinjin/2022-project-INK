@@ -85,6 +85,11 @@
       bottom: 10vh;
     }
 
+    /* 달력 날짜를 연출하기 위한 흰 글씨 */
+    .color-fff{
+      color: var(--color-6);
+    }
+
 
   </style>
 </head>
@@ -120,14 +125,20 @@
       </div>
       <!-- 숫자 -->
       <div>
-        <div class="calendar-on"><p class="sans">1</p></div>
+        <!------------- 공간 채우기 위한 div --------------->
+        <div><p class="sans color-fff">1</p></div>
+        <div><p class="sans color-fff">1</p></div>
+        <div><p class="sans color-fff">1</p></div>
+        <div><p class="sans color-fff">1</p></div>
+        <!------------- 이 아래부터 날짜 시작 --------------->
+        <div><p class="sans">1</p></div>
         <div class="calendar-on"><p class="sans">2</p></div>
         <div class="calendar-on"><p class="sans">3</p></div>
         <div class="calendar-on"><p class="sans">4</p></div>
-        <div><p class="sans">5</p></div>
-        <div class="calendar-on"><p class="sans">6</p></div>
+        <div class="calendar-on"><p class="sans">5</p></div>
+        <div class="calendar-off"><p class="sans">6</p></div>
         <div class="calendar-on"><p class="sans">7</p></div>
-        <div class="calendar-today"><p class="sans">8</p></div>
+        <div><p class="calendar-today">8</p></div>
         <div><p class="sans">9</p></div>
         <div><p class="sans">10</p></div>
         <div><p class="sans">11</p></div>
