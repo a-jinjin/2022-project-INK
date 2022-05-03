@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03-mood</title>
+  <link rel="stylesheet" href="./css/03-mood-style.css">
+</head>
+<body>
+  <div id="root">
+    <nav>logo</nav>
+    <p>오늘하루<br>어떤 기분이었나요?</p>
+    <div>
+      <div id="moodBar">
+        <img src="" alt="">
+      </div>
+      <div id="imoji">
+        <img src="./img/mood-3.svg" alt="">
+      </div>
+      <p id="mood">MOOD</p>
+    </div>
+
+    <button>확인</button>
+  </div>
+
+
+  <script>
+    const root = document.getElementById('root');
+    const imoji = document.getElementById('imoji');
+    const mood = document.getElementById('mood');
+    const moodBar = document.getElementById('moodBar');
+
+    const imojiArr = [
+      '../ink-01/img/mood-1.svg', 
+      '../ink-01/img/mood-2.svg', 
+      '../ink-01/img/mood-3.svg',
+      '../ink-01/img/mood-4.svg',
+      '../ink-01/img/mood-5.svg'
+    ];
+    const moodArr = [
+      'terrible', 'bad', 'normal', 'good', 'happy'
+    ];
+
+    const barArr = [
+      '../ink-01/img/gauge-2-1.svg', 
+      '../ink-01/img/gauge-2-2.svg', 
+      '../ink-01/img/gauge-2-3.svg',
+      '../ink-01/img/gauge-2-4.svg',
+      '../ink-01/img/gauge-2-5.svg'
+    ]
+
+    let i = 0;
+    imoji.addEventListener('click', function(){
+      // console.dir(imoji.children[0]);
+      imoji.children[0].src = imojiArr[i];
+      moodBar.children[0].src = barArr[i];
+      mood.textContent = moodArr[i];
+
+      i++
+      
+      if(i===imojiArr.length){
+        i = 0;
+      }
+
+    });
+
+  </script>
+</body>
+</html>
