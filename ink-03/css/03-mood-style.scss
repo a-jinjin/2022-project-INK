@@ -9,17 +9,52 @@
   flex-direction: $fdir;
 }
 
+// 색상변수
+$color-1: #0D0D0D;
+$color-2: #353940;
+$color-3: #626973;
+$color-4: #9298A6;
+$color-5: #C5CCD9;
+$color-6: #fff;
+
 $font-roboto : 'Roboto', sans-serif;
 
 #root{
   @include flex(start, center, column);
   width: 100vw; height: 100vh;
+  background-image: url(../img/bg-2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   // background-color: #ccc;
 
   & > nav:first-child{
-    width: 100vw; height: 10vh;
-    background-color: #000;
+    @include flex(space-around, start, row);
+    width: 100vw; height: 12vh;
     position: fixed;
+    background-image: url(../img/wave-head.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & > div:first-child{
+      width: 4vh; height: 4vh;
+      border-radius: 3vh;
+      background-color: $color-5;
+      margin-top: 2vh;
+    }
+
+    & > p{
+      margin-top: 3vh;
+      font-family: $font-roboto;
+      font-weight: bold;
+      letter-spacing: 1vw;
+      color: $color-5;
+    }
+
+    & > div:last-child {
+      width: 4vh; height: 4vh;
+      border-radius: 3vh;
+      margin-top: 2vh;
+    }
 
   }
 
@@ -62,6 +97,7 @@ $font-roboto : 'Roboto', sans-serif;
       font-size: 24px;
       font-weight: bold;
       font-family: $font-roboto;
+      color: $color-3;
     }
 
   }
