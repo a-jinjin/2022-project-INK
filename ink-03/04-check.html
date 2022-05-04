@@ -110,6 +110,7 @@
       // toggleCircle[toggleI].style.backgroundColor = 'red';
       // ==> 색상이 잘 바뀌는 것을 확인
       toggleCircle[toggleI].style.left = '0.5vh';
+      toggleBox[toggleI].style.cursor = 'pointer';
 
       let toggleValue = true;
 
@@ -120,12 +121,14 @@
         if(toggleValue === true){
           toggleCircle[toggleI].style.left = '';
           toggleCircle[toggleI].style.right = '0.5vh';
-
+          toggleBox[toggleI].style.backgroundColor = 'blue';
+          
           toggleValue = false;
-        
+          
         }else{
           toggleCircle[toggleI].style.left = '0.5vh';
           toggleCircle[toggleI].style.right = '';
+          toggleBox[toggleI].style.backgroundColor = 'gray';
 
           toggleValue = true;
         }
