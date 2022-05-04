@@ -18,21 +18,81 @@
     <div>
       <div id="checkInside">
         <p>실내활동</p>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
       </div>
       <div id="checkOutside">
         <p>야외활동</p>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
-        <div><p>list</p><div></div></div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+        <div>
+          <p>list</p>
+          <div class="toggle-box">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -41,7 +101,39 @@
 
 
   <script>
+    const toggleBox = document.getElementsByClassName('toggle-box');
+    const toggleCircle = document.getElementsByClassName('toggle-circle');
+    // console.log(toggleCircle);
+    // console.log(toggleCircle[0]);
     
+    for(let toggleI = 0; toggleI < toggleCircle.length; toggleI++){
+      // toggleCircle[toggleI].style.backgroundColor = 'red';
+      // ==> 색상이 잘 바뀌는 것을 확인
+      toggleCircle[toggleI].style.left = '0.5vh';
+
+      let toggleValue = true;
+
+      // for 안에 이벤트를 넣을 수도 있나?
+      toggleBox[toggleI].addEventListener('click', function(){
+        // console.log('toggle버튼 눌림');
+        // ==> 이벤트 정상작동 함.
+        if(toggleValue === true){
+          toggleCircle[toggleI].style.left = '';
+          toggleCircle[toggleI].style.right = '0.5vh';
+
+          toggleValue = false;
+        
+        }else{
+          toggleCircle[toggleI].style.left = '0.5vh';
+          toggleCircle[toggleI].style.right = '';
+
+          toggleValue = true;
+        }
+        
+      });
+      // ==> 작동은 잘 되는데, 동그라미가 너무 작아서 클릭 영역 맞추기가 힘들다.
+      // ==> 토글박스 전체에 이벤트를 주는건 어떨까?
+    }
 
   </script>
 </body>
