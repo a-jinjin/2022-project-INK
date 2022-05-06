@@ -10,7 +10,7 @@
 <body>
   <div id="root">
     <nav>
-      <div></div>
+      <div id="back-btn"></div>
       <p>하루의 잉크</p>
       <div></div>
     </nav>
@@ -105,6 +105,7 @@
     const toggleCircle = document.getElementsByClassName('toggle-circle');
     // console.log(toggleCircle);
     // console.log(toggleCircle[0]);
+    const backBtn = document.getElementById('back-btn');
     
     for(let toggleI = 0; toggleI < toggleCircle.length; toggleI++){
       // toggleCircle[toggleI].style.backgroundColor = 'red';
@@ -137,6 +138,11 @@
       // ==> 작동은 잘 되는데, 동그라미가 너무 작아서 클릭 영역 맞추기가 힘들다.
       // ==> 토글박스 전체에 이벤트를 주는건 어떨까?
     }
+
+    backBtn.addEventListener('click', function(){
+      let linkCheck = './03-mood.html';
+      location.href = linkCheck;
+    });
 
   </script>
 </body>

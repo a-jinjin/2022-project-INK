@@ -24,7 +24,7 @@
       </div>
       <p id="mood">오늘의 기분</p>
     </div>
-
+    
     <button>확인</button>
   </div>
 
@@ -34,6 +34,8 @@
     const imoji = document.getElementById('imoji');
     const mood = document.getElementById('mood');
     const moodBar = document.getElementById('moodBar');
+    const nextBtn = root.children[3];
+    // console.log(nextBtn);
 
     const imojiArr = [
       '../ink-01/img/mood-1.svg', 
@@ -67,6 +69,11 @@
         i = 0;
       }
 
+    });
+
+    nextBtn.addEventListener('click', function(){
+      let linkCheck = './04-check.html';
+      location.href = linkCheck;
     });
 
   </script>
