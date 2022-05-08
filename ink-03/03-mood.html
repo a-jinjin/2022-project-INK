@@ -10,7 +10,7 @@
 <body>
   <div id="root">
     <nav>
-      <div></div>
+      <div><img src="./img/btn-arrow.svg" alt=""></div>
       <p>하루의 잉크</p>
       <div></div>
     </nav>
@@ -25,7 +25,7 @@
       <p id="mood">오늘의 기분</p>
     </div>
     
-    <button>확인</button>
+    <button>다음</button>
   </div>
 
 
@@ -38,22 +38,22 @@
     // console.log(nextBtn);
 
     const imojiArr = [
-      '../ink-01/img/mood-1.svg', 
-      '../ink-01/img/mood-2.svg', 
-      '../ink-01/img/mood-3.svg',
-      '../ink-01/img/mood-4.svg',
-      '../ink-01/img/mood-5.svg'
+      './img/mood-1.svg', 
+      './img/mood-2.svg', 
+      './img/mood-3.svg',
+      './img/mood-4.svg',
+      './img/mood-5.svg'
     ];
     const moodArr = [
       '최악', '나쁨', '보통', '좋음', '행복'
     ];
 
     const barArr = [
-      '../ink-01/img/gauge-2-1.svg', 
-      '../ink-01/img/gauge-2-2.svg', 
-      '../ink-01/img/gauge-2-3.svg',
-      '../ink-01/img/gauge-2-4.svg',
-      '../ink-01/img/gauge-2-5.svg'
+      './img/gauge-2-1.svg', 
+      './img/gauge-2-2.svg', 
+      './img/gauge-2-3.svg',
+      './img/gauge-2-4.svg',
+      './img/gauge-2-5.svg'
     ]
 
     let i = 0;
@@ -62,6 +62,7 @@
       imoji.children[0].src = imojiArr[i];
       moodBar.children[0].src = barArr[i];
       mood.textContent = moodArr[i];
+      mood.style.color = '#45484B';
 
       i++
       
@@ -74,6 +75,16 @@
     nextBtn.addEventListener('click', function(){
       let linkCheck = './04-check.html';
       location.href = linkCheck;
+    });
+
+    nextBtn.addEventListener('mouseover', function(){
+      nextBtn.style.backgroundColor = '#63708B';
+      nextBtn.style.color = '#F2F2F0';
+    });
+
+    nextBtn.addEventListener('mouseout', function(){
+      nextBtn.style.backgroundColor = '#D8D9D7';
+      nextBtn.style.color = '#63708B';
     });
 
   </script>

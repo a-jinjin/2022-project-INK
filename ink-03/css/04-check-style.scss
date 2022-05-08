@@ -10,11 +10,11 @@
 }
 
 // 색상변수
-$color-1: #0D0D0D;
-$color-2: #353940;
-$color-3: #626973;
-$color-4: #9298A6;
-$color-5: #C5CCD9;
+$color-1: #45484B;
+$color-2: #A4A6A5;
+$color-3: #D8D9D7;
+$color-4: #F2F2F0;
+$color-5: #63708B;
 $color-6: #fff;
 
 $font-roboto : 'Roboto', sans-serif;
@@ -22,7 +22,7 @@ $font-roboto : 'Roboto', sans-serif;
 #root{
   @include flex(start, center, column);
   width: 100vw; height: 100vh;
-  background-image: url(../img/bg-2.png);
+  background-image: url(../img/bg-1.svg);
   background-size: cover;
   background-repeat: no-repeat;
   // background-color: #ccc;
@@ -39,7 +39,7 @@ $font-roboto : 'Roboto', sans-serif;
     & > div:first-child{
       width: 4vh; height: 4vh;
       border-radius: 3vh;
-      background-color: $color-5;
+      // background-color: $color-5;
       margin-top: 2vh;
     }
 
@@ -48,7 +48,7 @@ $font-roboto : 'Roboto', sans-serif;
       font-family: $font-roboto;
       font-weight: bold;
       letter-spacing: 1vw;
-      color: $color-5;
+      color: $color-4;
     }
 
     & > div:last-child {
@@ -80,11 +80,12 @@ $font-roboto : 'Roboto', sans-serif;
       width: 100%; height: 28vh;
       margin-top: 1vh;
       border-radius: 2vh;
-      border: 1px solid $color-5;
+      border: 1px solid $color-3;
       background-color: $color-6;
 
       & > p:first-child{
         font-size: 16px;
+        color: $color-1;
         font-family: $font-roboto;
         font-weight: bold;
         margin: 2vh 4vw 1vh 4vw;
@@ -96,20 +97,21 @@ $font-roboto : 'Roboto', sans-serif;
         width: 90%; height: 10%;
         margin: 0 4vw 0.8vh 4vw;
         // background-color: lightgray;
-        font-size: 14px;
+        font-size: 13px;
+        color: $color-2;
 
         // 토글버튼
         & > div:last-child{
           @include flex(start, center, row);
           width: 14vw; height: 100%;
           border-radius: 5vw;
-          background: gray;
+          background: $color-4;
           position: relative;
 
           & > div{
             width: 2vh; height: 2vh;
             border-radius: 1vh;
-            background-color: #fff;
+            background-color: $color-5;
             position: absolute;
           }
 
@@ -119,12 +121,14 @@ $font-roboto : 'Roboto', sans-serif;
   }
 
   & > button:last-child{
-    width: 14vw; height: 4vh;
-    border: 1px solid lightgray;
-    background-color: #fff;
-    border-radius: 1.5vh;
-    font-size: 12px;
+    width: 17vw; height: 5vh;
+    border: 1px solid $color-6;
+    background-color: $color-3;
+    border-radius: 2vh;
+    font-size: 14px;
     position: fixed;
     bottom: 10vh;
+    color: $color-5;
+    font-weight: bold;
   }
 }

@@ -11,7 +11,7 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background-image: url(../img/bg-2.png);
+  background-image: url(../img/bg-1.svg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -31,7 +31,6 @@
   width: 4vh;
   height: 4vh;
   border-radius: 3vh;
-  background-color: #C5CCD9;
   margin-top: 2vh;
 }
 #root > nav:first-child > p {
@@ -39,7 +38,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   letter-spacing: 1vw;
-  color: #C5CCD9;
+  color: #F2F2F0;
 }
 #root > nav:first-child > div:last-child {
   width: 4vh;
@@ -86,15 +85,17 @@
   font-size: 24px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
-  color: #626973;
+  color: #D8D9D7;
 }
 #root > button:last-child {
-  width: 14vw;
-  height: 4vh;
-  border: 1px solid lightgray;
-  background-color: #fff;
-  border-radius: 1.5vh;
-  font-size: 12px;
+  width: 17vw;
+  height: 5vh;
+  border: 1px solid #fff;
+  background-color: #D8D9D7;
+  border-radius: 2vh;
+  font-size: 14px;
   position: fixed;
   bottom: 10vh;
+  color: #63708B;
+  font-weight: bold;
 }/*# sourceMappingURL=03-mood-style.css.map */
