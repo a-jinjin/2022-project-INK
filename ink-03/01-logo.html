@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01-logo</title>
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    #root{
+      width: 100vw; height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div:nth-child(1){
+      width: 15vh; height: 15vh;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <div>
+      <img src="./img/logo.svg" alt="">
+    </div>
+  </div>
+
+  <script>
+    const root = document.getElementById('root');
+
+    setTimeout(function(){
+      // console.log('test');
+      let linkIntro = './02-intro.html';
+      location.href = linkIntro;
+    },5000);
+
+  </script>
+
+</body>
+</html>

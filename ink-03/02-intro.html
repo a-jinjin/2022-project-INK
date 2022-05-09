@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01-intro</title>
+
+  <style>
+    * {margin: 0; height: 0;}
+    #root {
+      width: 100vw; height: 100vh;
+      background-color: #ccc;
+      display: flex;
+      justify-content: cneter;
+      align-items: center;
+      position: relative;
+    }
+
+    #root>nav{
+      width: 100vw; height: 20vh;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+    }
+
+    #root>div{
+      min-width: 100vw; height: 100vh;
+      background-color: #555;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <!-- <p>intro page!</p> -->
+    <nav id="top-fixed">
+      <p>lorem</p>
+    </nav>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+    const topFixed = document.getElementById('top-fixed');
+    // console.log(topFixed);
+    const root = document.getElementById('root');
+    // console.dir(root);
+    const boxOne = root.children[1];
+    const boxTwo = root.children[2];
+    const boxThree = root.children[3];
+    // console.dir(box);
+
+    boxOne.style.display = '';
+    boxOne.style.top = 0;
+    boxOne.style.backgroundColor = 'orange';
+    boxTwo.style.display = 'none';
+    boxTwo.style.top = 0;
+    boxTwo.style.backgroundColor = 'salmon';
+    boxThree.style.display = 'none';
+    boxThree.style.top = 0;
+    boxThree.style.backgroundColor = 'tan';
+    
+    let value = 0;
+
+    // nav를 클릭하면 display=>''로 바뀌도록
+    root.addEventListener('wheel', function(){
+      
+      if(value === 0){
+        boxOne.style.display = 'none';
+        boxTwo.style.display = '';
+        value = 1;
+      }else if(value === 1){
+        boxOne.style.display = 'none';
+        boxTwo.style.display = 'none';
+        boxThree.style.display = '';
+        value = 2;
+      }else{
+        boxOne.style.display = '';
+        boxTwo.style.display = 'none';
+        boxThree.style.display = 'none';
+        value = 0;
+      }
+
+    });
+
+  </script>
+</body>
+</html>
