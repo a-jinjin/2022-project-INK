@@ -108,6 +108,7 @@
     // console.log(toggleCircle);
     // console.log(toggleCircle[0]);
     const backBtn = document.getElementById('back-btn');
+    const nextBtn = document.getElementById('nextBtn');
     
     for(let toggleI = 0; toggleI < toggleCircle.length; toggleI++){
       // toggleCircle[toggleI].style.backgroundColor = 'red';
@@ -146,6 +147,11 @@
     backBtn.addEventListener('click', function(){
       let linkCheck = './03-mood.html';
       location.href = linkCheck;
+    });
+
+    nextBtn.addEventListener('click', function(){
+      let linkResult = './05-result.html';
+      location.href = linkResult;
     });
 
     nextBtn.addEventListener('mouseover', function(){
