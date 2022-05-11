@@ -1,0 +1,31 @@
+.btn-on{
+  border: 1px solid #fff;
+  background-color: #63708B;
+  color: #D8D9D7;
+  font-weight: bold;
+}
+
+.btn-off{
+  border: 1px solid #fff;
+  background-color: #D8D9D7;
+  color: #63708B;
+  font-weight: bold;
+}
+
+.header-bar-long{
+  width: 30px; height: 6px;
+  margin-left: 5px;
+  border-radius: 3px;
+  background-color: #F2F2F0;
+}
+
+.header-bar-short{
+  width: 9px; height: 6px;
+  margin-left: 5px;
+  border-radius: 3px;
+  background-color: #A4A6A5;
+}
+
+.display-none{
+  display: none;
+}
