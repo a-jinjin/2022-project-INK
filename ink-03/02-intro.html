@@ -10,7 +10,6 @@
     * {margin: 0; height: 0;}
     #root {
       width: 100vw; height: 100vh;
-      /* background-color: #ccc; */
       display: flex;
       justify-content: cneter;
       align-items: center;
@@ -28,21 +27,30 @@
       top: 0;
     }
 
-    #root>div{
+    /* #root>div{
       min-width: 100vw; height: 100vh;
-      /* background-color: #555; */
       background-image: url(./img/intro-01.svg);
-    }
+    } */
 
-    #root>button{
+    #root > button{
       width: 17vw;
       height: 5vh;
-      border: 1px solid #fff;
-      background-color: #D8D9D7;
       border-radius: 2vh;
       font-size: 14px;
       position: fixed;
       bottom: 10vh;
+    }
+    
+    .btn-on{
+      border: 1px solid #fff;
+      background-color: #63708B;
+      color: #D8D9D7;
+      font-weight: bold;
+    }
+    
+    .btn-off{
+      border: 1px solid #fff;
+      background-color: #D8D9D7;
       color: #63708B;
       font-weight: bold;
     }
@@ -61,41 +69,115 @@
       </div>
       <p>lorem</p>
     </nav>
-    <div></div>
-    <button id="skipBtn">스킵</button>
+    <!-- <div></div> -->
+    <button id="skipBtn"></button>
 
   </div>
 
   <script>
-    const topFixed = document.getElementById('top-fixed');
-    // console.log(topFixed);
     const root = document.getElementById('root');
-    // console.dir(root);
+    const topFixed = document.getElementById('top-fixed');
     const skipBtn = document.getElementById('skipBtn');
-    const boxOne = root.children[1];
     
-    // console.dir(box);
+    // 배경에 들어갈 이미지 배열로 만들어놓기
     let bgImageArr = [
-      './img/intro-01.svg',
-      './img/intro-02.svg',
-      './img/intro-03.svg'
+      'url(./img/intro-01.svg)',
+      'url(./img/intro-02.svg)',
+      'url(./img/intro-03.svg)'
     ];
+    // 가장 처음 보여줄 배경
+    root.style.backgroundImage = bgImageArr[0];
 
-    boxOne.style.top = 0;
-    boxOne.style.backgroundImage = `url(${bgImageArr[0]})`;
-    
-    
+    // 가장 처음 보여줄 버튼에 이벤트 적용
+    // ==> '스킵'이라고 써있는 버튼을 누르면 mood페이지로 이동한다.
+    skipBtn.textContent = '스킵';
+    skipBtn.classList.add('btn-off');
+    skipBtn.addEventListener('click', function(){
+      let linkMood = './03-mood.html';
+      location.href = linkMood;
+    });
+
+    // wheel 이벤트 제어를 위한 변수 value : 스위치처럼 사용할 것
     let value = 0;
-    root.addEventListener('click', function(){
-      
+
+    // wheel 이벤트 추가
+    root.addEventListener('wheel', function(event){
+
       if(value === 0){
-        boxOne.style.backgroundImage = `url(${bgImageArr[1]})`;
-        
-        value = 1;
+        if(event.deltaY > 0) {
+          // 두 번째 페이지의 버튼 내용물(텍스트)는 '스킵'
+          skipBtn.textContent = '스킵';
+          skipBtn.classList.add('btn-off');
+          skipBtn.classList.remove('btn-on');
+          root.style.backgroundImage = bgImageArr[1];
+
+          // 두 번째 페이지의 '스킵'버튼을 누르면 mood페이지로 이동
+          skipBtn.addEventListener('click', function(){
+            let linkMood = './03-mood.html';
+            location.href = linkMood;
+          });
+
+          value = 1;
+
+        }else{
+          alert('첫페이지');
+        }
+      
       }else if(value === 1){
-        boxOne.style.backgroundImage = `url(${bgImageArr[2]})`;
-        skipBtn.textContent = '시작';
-        value = 2;
+        if(event.deltaY > 0){
+          // 세 번째 페이지의 '스킵'버튼의 textContent는 '시작'이라고 바꿔준다.
+          skipBtn.textContent = '시작';
+          skipBtn.classList.remove('btn-off');
+          skipBtn.classList.add('btn-on');
+
+          root.style.backgroundImage = bgImageArr[2];
+          
+          // 세 번째 페이지의 '시작'버튼을 누르면 mood페이지로 이동
+          skipBtn.addEventListener('click', function(){
+            // 페이지 이동
+            let linkMood = './03-mood.html';
+            location.href = linkMood;
+          });
+          
+          value = 2;
+          
+        }else{
+          // 첫 번째 페이지의 버튼 내용물(텍스트)는 '스킵'
+          skipBtn.textContent = '스킵';
+          skipBtn.classList.add('btn-off');
+          skipBtn.classList.remove('btn-on');
+          
+          root.style.backgroundImage = bgImageArr[0];
+
+          // 첫 번째 페이지의 '스킵'버튼을 누르면 mood페이지로 이동
+          skipBtn.addEventListener('click', function(){
+            let linkMood = './03-mood.html';
+            location.href = linkMood;
+          });
+
+          value = 0;
+        }
+
+      }else{
+        if(event.deltaY > 0){
+          alert('마지막 페이지');
+
+        }else{
+          // 두 번째 페이지의 버튼 내용물(텍스트)는 '스킵'
+          skipBtn.textContent = '스킵';
+          skipBtn.classList.add('btn-off');
+          skipBtn.classList.remove('btn-on');
+
+          root.style.backgroundImage = bgImageArr[1];
+
+          // 두 번째 페이지의 '스킵'버튼을 누르면 mood페이지로 이동
+          skipBtn.addEventListener('click', function(){
+            let linkMood = './03-mood.html';
+            location.href = linkMood;
+          });
+
+          value = 1;
+        }
       }
 
     });
