@@ -29,3 +29,42 @@
 .display-none{
   display: none;
 }
+
+.text-big {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.text-mid {
+  font-size: 18px;
+}
+
+.text-small {
+  font-size: 14px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.ink-thum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 38vw; height: 23vh;
+  margin-bottom: 1.5vh;
+  border: 1px solid #F2F2F0;
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.ink-thum-img {
+  width: 27vw; height: 27vw;
+  margin-bottom: 2vh;
+  border-radius: 15vw;
+  background-color: #F2F2F0;
+  background-size: cover;
+}
