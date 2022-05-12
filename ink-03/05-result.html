@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>05-result</title>
-  <link rel="stylesheet" href="./css/04-check-style.css">
+  <link rel="stylesheet" href="./css/05-result-style.css">
+  <link rel="stylesheet" href="./css/class.css">
 </head>
 <body>
   <div id="root">
@@ -16,69 +17,41 @@
       <p>하루의 잉크</p>
       <div></div>
     </nav>
-    <p>코랄레드</p>
+    <div>코랄레드</div>
+    <div></div>
     <div>
-      
+      <p class="text-mid">어깨춤이 들썩들썩</p>
+      <p class="text-big">코랄레드</p>
+      <p class="text-small">콧노래가 흥얼흥얼, 발걸음도 가벼운 하루.<br>
+        싱그러운 에너지 뿜뿜하는 코랄레드 어떤가요?</p>
     </div>
-
-    <button id="nextBtn">확인</button>
+    <button id="next-btn" class="btn-on">추천 잉크 보러가기</button>
+    <button id="repeat-btn" class="btn-off">잉크 다시 골라보기</button>
   </div>
 
 
   <script>
-    const toggleBox = document.getElementsByClassName('toggle-box');
-    const toggleCircle = document.getElementsByClassName('toggle-circle');
-    // console.log(toggleCircle);
-    // console.log(toggleCircle[0]);
     const backBtn = document.getElementById('back-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const repeatBtn = document.getElementById('repeat-btn');
     
-    for(let toggleI = 0; toggleI < toggleCircle.length; toggleI++){
-      // toggleCircle[toggleI].style.backgroundColor = 'red';
-      // ==> 색상이 잘 바뀌는 것을 확인
-      toggleCircle[toggleI].style.left = '0.5vh';
-      toggleBox[toggleI].style.cursor = 'pointer';
-
-      let toggleValue = true;
-
-      // for 안에 이벤트를 넣을 수도 있나?
-      toggleBox[toggleI].addEventListener('click', function(){
-        // console.log('toggle버튼 눌림');
-        // ==> 이벤트 정상작동 함.
-        if(toggleValue === true){
-          toggleCircle[toggleI].style.left = '';
-          toggleCircle[toggleI].style.right = '0.5vh';
-          toggleCircle[toggleI].style.backgroundColor = '#F2F2F0';
-          toggleBox[toggleI].style.backgroundColor = '#63708B';
-          
-          toggleValue = false;
-          
-        }else{
-          toggleCircle[toggleI].style.left = '0.5vh';
-          toggleCircle[toggleI].style.right = '';
-          toggleCircle[toggleI].style.backgroundColor = '#63708B';
-          toggleBox[toggleI].style.backgroundColor = '#F2F2F0';
-
-          toggleValue = true;
-        }
-        
-      });
-      // ==> 작동은 잘 되는데, 동그라미가 너무 작아서 클릭 영역 맞추기가 힘들다.
-      // ==> 토글박스 전체에 이벤트를 주는건 어떨까?
-    }
+    backBtn.style.cursor = 'pointer';
+    nextBtn.style.cursor = 'pointer';
+    repeatBtn.style.cursor = 'pointer';
 
     backBtn.addEventListener('click', function(){
       let linkCheck = './03-mood.html';
       location.href = linkCheck;
     });
 
-    nextBtn.addEventListener('mouseover', function(){
-      nextBtn.style.backgroundColor = '#63708B';
-      nextBtn.style.color = '#F2F2F0';
+    nextBtn.addEventListener('click', function(){
+      let linkCheck = './06-inklist.html';
+      location.href = linkCheck;
     });
 
-    nextBtn.addEventListener('mouseout', function(){
-      nextBtn.style.backgroundColor = '#D8D9D7';
-      nextBtn.style.color = '#63708B';
+    repeatBtn.addEventListener('click', function(){
+      let linkCheck = './03-mood.html';
+      location.href = linkCheck;
     });
 
   </script>
